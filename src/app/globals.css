@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Font Utilities */
+.font-cinzel {
+    font-family: var(--font-cinzel), serif;
+}
+
+.font-playfair {
+    font-family: var(--font-playfair), serif;
+}
+
+.font-quintessential {
+    font-family: var(--font-quintessential), serif;
+}
+
+.font-pinyon {
+    font-family: var(--font-pinyon-script), cursive;
+}
+
+.font-lovers-quarrel {
+    font-family: var(--font-lovers-quarrel), cursive;
+}
+
+/* Hero Section Font */
+#hero-section,
+#hero-section * {
+    font-family: var(--font-quintessential), serif;
+}
+
+/* Scrollbar Hidden - All Browsers */
+@layer base {
+
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for Firefox */
+    html {
+        scrollbar-width: none;
+    }
+
+    /* Hide scrollbar for IE and old Edge */
+    body {
+        -ms-overflow-style: none;
+    }
+}
+
+/* Light Gallery Custom Styles */
+.lg-backdrop {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.lg-toolbar,
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+    background-color: transparent !important;
 }
